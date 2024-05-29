@@ -11,3 +11,12 @@ contract Zonic is ERC20, Ownable {
         _mint(msg.sender, _initialSupply);
     }
 }
+truffle compile
+const Zonic = artifacts.require("Zonic");
+
+module.exports = function(deployer) {
+    deployer.deploy(Zonic);
+};
+
+
+
